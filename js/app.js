@@ -52,10 +52,10 @@ document.querySelector("ul").appendChild(listItem3);
 listItem3.appendChild(linkItem3);
 
 // This selects all of the sections in HTML, and puts them in a NodeList (which is not an array!).
-let sectionElements = document.querySelectorAll("section")
+let sectionElements = document.querySelectorAll("section");
 // Convert NodeList to real array - https://developer.mozilla.org/en-US/docs/Web/API/NodeList
 let sections = Array.from(sectionElements);
-for( section of sections){
+for (const element of sections){
   console.log(section.dataset.nav)
 // TODO: console.log out the dataset.nav property
 }
