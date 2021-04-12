@@ -17,15 +17,48 @@
  * Define Global Variables
  * 
 */
-let items = document.createElement("li");
-let location = document.querySelectorAll("section");
-let navlist = document.getElementById(navbar__list);
+
 /**
  * End Global Variables
  * Start Helper Functions
  * 
 */
+// Creating the Navigation Bar
+let list = document.getElementById("nav__list");
+let  listItem1 = document.createElement("li");
+let  listItem2 = document.createElement("li");
+let  listItem3 = document.createElement("li");
 
+
+let linkItem1 = document.createElement("a");
+linkItem1.setAttribute("href", "#section1");
+linkItem1.textContent="first";
+
+document.querySelector("ul").appendChild(listItem1);
+listItem1.appendChild(linkItem1);
+
+let linkItem2 = document.createElement("a");
+linkItem2.setAttribute("href", "#section2");
+linkItem2.textContent="second";
+
+document.querySelector("ul").appendChild(listItem2);
+listItem2.appendChild(linkItem2);
+
+let linkItem3 = document.createElement("a");
+linkItem3.setAttribute("href", "#section3");
+linkItem3.textContent="third";
+
+document.querySelector("ul").appendChild(listItem3);
+listItem3.appendChild(linkItem3);
+
+// This selects all of the sections in HTML, and puts them in a NodeList (which is not an array!).
+let sectionElements = document.querySelectorAll("section")
+// Convert NodeList to real array - https://developer.mozilla.org/en-US/docs/Web/API/NodeList
+let sections = Array.from(sectionElements);
+for( section of sections){
+  console.log(section.dataset.nav)
+// TODO: console.log out the dataset.nav property
+}
 
 
 /**
